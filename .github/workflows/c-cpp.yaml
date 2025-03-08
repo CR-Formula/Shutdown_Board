@@ -17,6 +17,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi
+          git init submodules
+          git submodule update --init --recursive
 
       - name: Build with make
         run: |
